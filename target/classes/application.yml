@@ -1,0 +1,21 @@
+server:
+  port: 8090
+
+spring:  
+  datasource:
+    url: jdbc:postgresql://localhost:5432/lfdb
+    username: postgres
+    password: lf123
+  jpa:
+    generate-ddl: false
+    show-sql: true
+
+logging:
+  level:
+    root: WARN
+    com.memorynotfound: DEBUG
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+  path: logs
+  
+  file: ${logging.path}/lf.log
